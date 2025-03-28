@@ -1,0 +1,31 @@
+<html>
+<head>
+<meta charset="utf-8">
+    <title>
+        Hello?
+    </title>
+</head>
+<body>
+    <font style="font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif">Hello?</font>
+    <table border>
+        <tr>
+            <th scope="col" id = "col0">Hello!</th>
+            <th scope="col" id="col1">¡Hola!</th>
+            <th scope="col" id="col2">안녕하세요!</th>
+        </tr>
+    </table>
+</body>
+<input type="button" value="셔플" onclick = "triggerShuffle()"></button>
+</html>
+<script>
+function triggerShuffle() {
+    col1 = document.querySelector("#col1");
+    col2 = document.querySelector("#col2");
+    var tmp = col1.textContent;
+    col1.textContent = col2.textContent;
+    col2.textContent = tmp;
+    tmp = col1.textContent;
+    col1.textContent = col0.textContent;
+    col0.textContent = tmp;
+}
+</script>
